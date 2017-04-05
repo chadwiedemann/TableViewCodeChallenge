@@ -16,6 +16,10 @@
 		D89059C81E9554D400CF463A /* SelectFareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89059C61E9554D400CF463A /* SelectFareViewController.xib */; };
 		D89059CB1E9554E700CF463A /* ConfirmSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059C91E9554E700CF463A /* ConfirmSelectionViewController.swift */; };
 		D89059CC1E9554E700CF463A /* ConfirmSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89059CA1E9554E700CF463A /* ConfirmSelectionViewController.xib */; };
+		D89059D31E95591400CF463A /* Rider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059D21E95591400CF463A /* Rider.swift */; };
+		D89059D61E95593100CF463A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059D51E95593100CF463A /* DAO.swift */; };
+		D89059D81E955A5900CF463A /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059D71E955A5900CF463A /* Fare.swift */; };
+		D89059DA1E955BC700CF463A /* riderData.json in Resources */ = {isa = PBXBuildFile; fileRef = D89059D91E955BC700CF463A /* riderData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		D89059C61E9554D400CF463A /* SelectFareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectFareViewController.xib; sourceTree = "<group>"; };
 		D89059C91E9554E700CF463A /* ConfirmSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmSelectionViewController.swift; sourceTree = "<group>"; };
 		D89059CA1E9554E700CF463A /* ConfirmSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmSelectionViewController.xib; sourceTree = "<group>"; };
+		D89059D21E95591400CF463A /* Rider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rider.swift; sourceTree = "<group>"; };
+		D89059D51E95593100CF463A /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		D89059D71E955A5900CF463A /* Fare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
+		D89059D91E955BC700CF463A /* riderData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = riderData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 		D89059A31E95543200CF463A = {
 			isa = PBXGroup;
 			children = (
+				D89059D41E95591700CF463A /* Model */,
 				D89059CD1E9554EC00CF463A /* Controllers */,
 				D89059CE1E9554F300CF463A /* Views */,
 				D89059AE1E95543200CF463A /* moovelCodeChalenge */,
@@ -65,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D89059AF1E95543200CF463A /* AppDelegate.swift */,
+				D89059D91E955BC700CF463A /* riderData.json */,
 				D89059B61E95543200CF463A /* Assets.xcassets */,
 				D89059B81E95543200CF463A /* LaunchScreen.storyboard */,
 				D89059BB1E95543200CF463A /* Info.plist */,
@@ -90,6 +100,16 @@
 				D89059CA1E9554E700CF463A /* ConfirmSelectionViewController.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D89059D41E95591700CF463A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D89059D51E95593100CF463A /* DAO.swift */,
+				D89059D21E95591400CF463A /* Rider.swift */,
+				D89059D71E955A5900CF463A /* Fare.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +176,7 @@
 				D89059B71E95543200CF463A /* Assets.xcassets in Resources */,
 				D89059C81E9554D400CF463A /* SelectFareViewController.xib in Resources */,
 				D89059C41E9554C200CF463A /* SelectRiderViewController.xib in Resources */,
+				D89059DA1E955BC700CF463A /* riderData.json in Resources */,
 				D89059CC1E9554E700CF463A /* ConfirmSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,8 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89059D61E95593100CF463A /* DAO.swift in Sources */,
 				D89059C71E9554D400CF463A /* SelectFareViewController.swift in Sources */,
 				D89059B01E95543200CF463A /* AppDelegate.swift in Sources */,
+				D89059D31E95591400CF463A /* Rider.swift in Sources */,
+				D89059D81E955A5900CF463A /* Fare.swift in Sources */,
 				D89059CB1E9554E700CF463A /* ConfirmSelectionViewController.swift in Sources */,
 				D89059C31E9554C200CF463A /* SelectRiderViewController.swift in Sources */,
 			);
