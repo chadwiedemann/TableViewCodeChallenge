@@ -50,25 +50,28 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-7K-jUu">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-7K-jUu">
                     <rect key="frame" x="309" y="112" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-NL-4jJ">
-                    <rect key="frame" x="305" y="77" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="+"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-NL-4jJ">
+                    <rect key="frame" x="321" y="77" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="addTicketButton:" destination="-1" eventType="touchUpInside" id="Mke-5r-fiW"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyV-3T-eVT">
-                    <rect key="frame" x="305" y="132" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="-"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyV-3T-eVT">
+                    <rect key="frame" x="321" y="132" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="-">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="subtractTicketButton:" destination="-1" eventType="touchUpInside" id="Yjy-yw-fh2"/>
                     </connections>
@@ -76,16 +79,22 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="PyV-3T-eVT" firstAttribute="top" secondItem="kGP-NL-4jJ" secondAttribute="bottom" constant="25" id="2WB-9T-CfO"/>
                 <constraint firstItem="JLF-G6-Sfu" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="3Ft-zm-phD"/>
                 <constraint firstItem="JLF-G6-Sfu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3pC-vq-VHq"/>
+                <constraint firstItem="kGP-NL-4jJ" firstAttribute="top" secondItem="JLF-G6-Sfu" secondAttribute="bottom" constant="23.5" id="4h5-qK-oGw"/>
                 <constraint firstItem="z2n-yK-PCi" firstAttribute="top" secondItem="4R9-Ap-6DT" secondAttribute="bottom" constant="4" id="HBp-6l-U39"/>
+                <constraint firstAttribute="trailing" secondItem="qB1-7K-jUu" secondAttribute="trailing" constant="24" id="LCF-7s-KVK"/>
                 <constraint firstItem="4R9-Ap-6DT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="W2v-qD-dld"/>
                 <constraint firstItem="z2n-yK-PCi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Xel-md-N0o"/>
                 <constraint firstAttribute="bottom" secondItem="KXh-jd-Nx7" secondAttribute="bottom" constant="15" id="Ylh-gv-Rmr"/>
                 <constraint firstAttribute="trailing" secondItem="KXh-jd-Nx7" secondAttribute="trailing" constant="15" id="bHX-1v-NuI"/>
                 <constraint firstItem="KXh-jd-Nx7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="cmV-qL-Gth"/>
                 <constraint firstAttribute="trailing" secondItem="JLF-G6-Sfu" secondAttribute="trailing" id="csH-5A-Pji"/>
+                <constraint firstAttribute="trailing" secondItem="kGP-NL-4jJ" secondAttribute="trailing" constant="24" id="hbf-jL-uYD"/>
+                <constraint firstItem="qB1-7K-jUu" firstAttribute="top" secondItem="kGP-NL-4jJ" secondAttribute="bottom" constant="5" id="iS3-3K-rXK"/>
                 <constraint firstItem="JLF-G6-Sfu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jpH-5Q-IVB"/>
+                <constraint firstAttribute="trailing" secondItem="PyV-3T-eVT" secondAttribute="trailing" constant="24" id="l1b-ZC-tsD"/>
                 <constraint firstItem="4R9-Ap-6DT" firstAttribute="top" secondItem="JLF-G6-Sfu" secondAttribute="bottom" constant="29.5" id="mIV-Bh-ri0"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="54.5"/>
