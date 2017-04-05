@@ -10,6 +10,8 @@ import UIKit
 
 class SelectFareViewController: UIViewController {
 
+    let dao = DAO.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,16 +36,16 @@ class SelectFareViewController: UIViewController {
 
 }
 
-extension SelectFareViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    
-    
-}
+//extension SelectFareViewController: UITableViewDelegate, UITableViewDataSource {
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        
+//    }
+//    
+//    
+//    
+//}

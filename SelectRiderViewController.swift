@@ -10,8 +10,12 @@ import UIKit
 
 class SelectRiderViewController: UIViewController {
 
+    let dao = DAO.sharedInstance
+    
+    @IBOutlet weak var riderTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dao.readData()
 
         // Do any additional setup after loading the view.
     }
@@ -37,11 +41,22 @@ class SelectRiderViewController: UIViewController {
 extension SelectRiderViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "identifier")
+        if cell == nil{
+            cell = UITableViewCell.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: "identifier")
+        }
+        let tempRider = dao.riders[indexPath.row]
+        cell.textLabel?.text = tempRider.type
+        cell.detailTextLabel?.text = tempRider.subtext
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return dao.riders.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
     

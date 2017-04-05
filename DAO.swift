@@ -30,7 +30,31 @@ class DAO: NSObject {
     }
     
     func create(data: NSDictionary) {
-        Rider.init(type: ", subtext: <#T##String#>, fares: <#T##Array<Fare>#>)
+        let keys: Array<String> = data.allKeys as! Array<String>
+        for element in keys {
+            let currentDictionary: NSDictionary = data.value(forKey: element) as! NSDictionary
+            let newRider = Rider.init(type: element, subtext: self.createSubtext(dict: currentDictionary), fares: createFares(data: currentDictionary) )
+            self.riders.append(newRider)
+        }
+    
+    }
+    
+    func createSubtext(dict: NSDictionary) -> String {
+        if let sub: String = dict.value(forKey: "subtext") as? String {
+            return sub
+        }else{
+            return ""
+        }
+    }
+    
+    func createFares(data: NSDictionary) -> [Fare] {
+        var arr: Array<Fare> = []
+        let fareArray: Array<NSDictionary> = data.object(forKey: "fares") as! Array
+        for element in fareArray {
+           let newFare =  Fare.init(description: element.value(forKey: "description") as! String, price: element.value(forKey: "price") as! Double)
+            arr.append(newFare)
+        }
+        return arr
     }
     
     
