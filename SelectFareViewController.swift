@@ -46,7 +46,7 @@ extension SelectFareViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.textLabel?.text = currentRider.fares[indexPath.row].fareDescription
-        cell.detailTextLabel?.text = currentRider.fares[indexPath.row].price.description
+        cell.detailTextLabel?.text = "$\(currentRider.fares[indexPath.row].price.description)"
         return cell
     }
     
@@ -56,7 +56,13 @@ extension SelectFareViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected")
+        let controller = ConfirmSelectionViewController()
+        controller.currentFare = currentRider.fares[indexPath.row]
+        controller.currentRider = self.currentRider
+        self.present(controller, animated: true, completion: nil)
     }
+    
+    
     
     
     

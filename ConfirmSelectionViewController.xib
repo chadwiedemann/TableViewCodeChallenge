@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmSelectionViewController" customModule="moovelCodeChalenge" customModuleProvider="target">
             <connections>
+                <outlet property="confirmButton" destination="KXh-jd-Nx7" id="1HL-Lg-jvj"/>
+                <outlet property="numberOfTicketsLabel" destination="qB1-7K-jUu" id="qZC-GK-MRD"/>
+                <outlet property="passTypeLabel" destination="z2n-yK-PCi" id="euB-h1-HHD"/>
+                <outlet property="riderTypeLabel" destination="4R9-Ap-6DT" id="5r7-hU-48j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,8 +31,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXh-jd-Nx7">
-                    <rect key="frame" x="15" y="622" width="345" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="15" y="619" width="345" height="33"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4R9-Ap-6DT">
                     <rect key="frame" x="16" y="83" width="49" height="24"/>
@@ -53,11 +61,17 @@
                     <rect key="frame" x="305" y="77" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="+"/>
+                    <connections>
+                        <action selector="addTicketButton:" destination="-1" eventType="touchUpInside" id="Mke-5r-fiW"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyV-3T-eVT">
                     <rect key="frame" x="305" y="132" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="-"/>
+                    <connections>
+                        <action selector="subtractTicketButton:" destination="-1" eventType="touchUpInside" id="Yjy-yw-fh2"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
