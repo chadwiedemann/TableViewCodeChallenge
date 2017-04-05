@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D89059B01E95543200CF463A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059AF1E95543200CF463A /* AppDelegate.swift */; };
-		D89059B21E95543200CF463A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059B11E95543200CF463A /* ViewController.swift */; };
-		D89059B51E95543200CF463A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89059B31E95543200CF463A /* Main.storyboard */; };
 		D89059B71E95543200CF463A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89059B61E95543200CF463A /* Assets.xcassets */; };
 		D89059BA1E95543200CF463A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89059B81E95543200CF463A /* LaunchScreen.storyboard */; };
+		D89059C31E9554C200CF463A /* SelectRiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059C11E9554C200CF463A /* SelectRiderViewController.swift */; };
+		D89059C41E9554C200CF463A /* SelectRiderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89059C21E9554C200CF463A /* SelectRiderViewController.xib */; };
+		D89059C71E9554D400CF463A /* SelectFareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059C51E9554D400CF463A /* SelectFareViewController.swift */; };
+		D89059C81E9554D400CF463A /* SelectFareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89059C61E9554D400CF463A /* SelectFareViewController.xib */; };
+		D89059CB1E9554E700CF463A /* ConfirmSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89059C91E9554E700CF463A /* ConfirmSelectionViewController.swift */; };
+		D89059CC1E9554E700CF463A /* ConfirmSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89059CA1E9554E700CF463A /* ConfirmSelectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D89059AC1E95543200CF463A /* moovelCodeChalenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moovelCodeChalenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89059AF1E95543200CF463A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D89059B11E95543200CF463A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D89059B41E95543200CF463A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D89059B61E95543200CF463A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D89059B91E95543200CF463A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D89059BB1E95543200CF463A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D89059C11E9554C200CF463A /* SelectRiderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRiderViewController.swift; sourceTree = "<group>"; };
+		D89059C21E9554C200CF463A /* SelectRiderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRiderViewController.xib; sourceTree = "<group>"; };
+		D89059C51E9554D400CF463A /* SelectFareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFareViewController.swift; sourceTree = "<group>"; };
+		D89059C61E9554D400CF463A /* SelectFareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectFareViewController.xib; sourceTree = "<group>"; };
+		D89059C91E9554E700CF463A /* ConfirmSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmSelectionViewController.swift; sourceTree = "<group>"; };
+		D89059CA1E9554E700CF463A /* ConfirmSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmSelectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,8 @@
 		D89059A31E95543200CF463A = {
 			isa = PBXGroup;
 			children = (
+				D89059CD1E9554EC00CF463A /* Controllers */,
+				D89059CE1E9554F300CF463A /* Views */,
 				D89059AE1E95543200CF463A /* moovelCodeChalenge */,
 				D89059AD1E95543200CF463A /* Products */,
 			);
@@ -55,13 +65,31 @@
 			isa = PBXGroup;
 			children = (
 				D89059AF1E95543200CF463A /* AppDelegate.swift */,
-				D89059B11E95543200CF463A /* ViewController.swift */,
-				D89059B31E95543200CF463A /* Main.storyboard */,
 				D89059B61E95543200CF463A /* Assets.xcassets */,
 				D89059B81E95543200CF463A /* LaunchScreen.storyboard */,
 				D89059BB1E95543200CF463A /* Info.plist */,
 			);
 			path = moovelCodeChalenge;
+			sourceTree = "<group>";
+		};
+		D89059CD1E9554EC00CF463A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D89059C11E9554C200CF463A /* SelectRiderViewController.swift */,
+				D89059C51E9554D400CF463A /* SelectFareViewController.swift */,
+				D89059C91E9554E700CF463A /* ConfirmSelectionViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D89059CE1E9554F300CF463A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D89059C21E9554C200CF463A /* SelectRiderViewController.xib */,
+				D89059C61E9554D400CF463A /* SelectFareViewController.xib */,
+				D89059CA1E9554E700CF463A /* ConfirmSelectionViewController.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +154,9 @@
 			files = (
 				D89059BA1E95543200CF463A /* LaunchScreen.storyboard in Resources */,
 				D89059B71E95543200CF463A /* Assets.xcassets in Resources */,
-				D89059B51E95543200CF463A /* Main.storyboard in Resources */,
+				D89059C81E9554D400CF463A /* SelectFareViewController.xib in Resources */,
+				D89059C41E9554C200CF463A /* SelectRiderViewController.xib in Resources */,
+				D89059CC1E9554E700CF463A /* ConfirmSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D89059B21E95543200CF463A /* ViewController.swift in Sources */,
+				D89059C71E9554D400CF463A /* SelectFareViewController.swift in Sources */,
 				D89059B01E95543200CF463A /* AppDelegate.swift in Sources */,
+				D89059CB1E9554E700CF463A /* ConfirmSelectionViewController.swift in Sources */,
+				D89059C31E9554C200CF463A /* SelectRiderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D89059B31E95543200CF463A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D89059B41E95543200CF463A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D89059B81E95543200CF463A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
