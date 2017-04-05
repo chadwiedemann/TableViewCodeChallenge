@@ -11,6 +11,7 @@ import UIKit
 class SelectFareViewController: UIViewController {
 
     let dao = DAO.sharedInstance
+    var currentRider: Rider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +37,27 @@ class SelectFareViewController: UIViewController {
 
 }
 
-//extension SelectFareViewController: UITableViewDelegate, UITableViewDataSource {
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        
-//    }
-//    
-//    
-//    
-//}
+extension SelectFareViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "identifier")
+        if cell == nil{
+            cell = UITableViewCell.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: "identifier")
+        }
+        
+        cell.textLabel?.text = currentRider.fares[indexPath.row].fareDescription
+        cell.detailTextLabel?.text = currentRider.fares[indexPath.row].price.description
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currentRider.fares.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected")
+    }
+    
+    
+    
+}

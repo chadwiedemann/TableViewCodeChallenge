@@ -10,6 +10,8 @@ import UIKit
 
 class ConfirmSelectionViewController: UIViewController {
 
+    var currentFare: Fare!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

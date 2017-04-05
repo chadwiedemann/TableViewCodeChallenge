@@ -56,7 +56,10 @@ extension SelectRiderViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print("selected")
+        let controller = SelectFareViewController()
+        controller.currentRider = dao.riders[indexPath.row]
+        self.present(controller, animated: true, completion: nil)
     }
     
     
